@@ -1,0 +1,326 @@
+@font-face {
+  font-family: PlusJakartaSans;
+  font-display: swap;
+  src: url("../fonts/PlusJakartaSans-Medium.woff2") format("woff2"), url("../fonts/PlusJakartaSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: PlusJakartaSans;
+  font-display: swap;
+  src: url("../fonts/PlusJakartaSans-Regular.woff2") format("woff2"), url("../fonts/PlusJakartaSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-ExtraBold.woff2") format("woff2"), url("../fonts/Raleway-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"), url("../fonts/Raleway-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  background: #1a1a1a;
+  font-family: PlusJakartaSans;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* -------------------------- */
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
+
+/* -------------------------- */
+[class*=__container] {
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* -------------------------- */
+.page {
+  flex: 1 1 auto;
+}
+
+/* -------------------------- */
+.lock {
+  overflow: hidden;
+}
+
+.header {
+  padding: 55px 0;
+  position: fixed;
+  width: 100%;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  font-family: Raleway;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  transition: color, background-clip 0.3s ease;
+}
+.header__logo:focus {
+  outline: 1px solid #fff;
+}
+.header__logo--y {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(307.72deg, #A7F306 2.04%, #F3CD06 98.59%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header__logo:hover {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(307.72deg, #A7F306 2.04%, #F3CD06 98.59%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.header__navigation {
+  padding: 0 15px;
+}
+@media (max-width: 767.98px) {
+  .header__navigation {
+    padding: 0;
+  }
+}
+.header .navigation__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 65px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 991.98px) {
+  .header .navigation__list {
+    column-gap: 25px;
+  }
+}
+.header .navigation__link {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.3s ease;
+}
+.header .navigation__link:hover {
+  color: #fff;
+}
+@media (max-width: 991.98px) {
+  .header .navigation__link {
+    font-size: 1.45rem;
+  }
+}
+.header__btn {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  position: relative;
+  padding-right: 34px;
+}
+@media (max-width: 991.98px) {
+  .header__btn {
+    padding-right: 28px;
+    font-size: 1.4rem;
+  }
+}
+.header__btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.header__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: url("../img/main/arrov.svg");
+}
+
+.menu__icon {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .navigation__icon._active span {
+    transform: scale(0);
+  }
+  .navigation__icon._active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+  }
+  .navigation__icon._active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+  }
+  .navigation__icon {
+    flex: 0 0 30px;
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+  }
+  .navigation__icon span,
+  .navigation__icon::before,
+  .navigation__icon::after {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: transform 0.3s ease 0s;
+    background-color: #fff;
+  }
+  .navigation__icon::before,
+  .navigation__icon::after {
+    content: "";
+  }
+  .navigation__icon::before {
+    top: 0;
+  }
+  .navigation__icon::after {
+    bottom: 0;
+  }
+  .navigation__icon span {
+    top: 50%;
+    transform: scale(1), translate(0px, -50%);
+  }
+  .navigation__list {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 100px 60px 60px 60px;
+    transition: top 0.3s ease 0s;
+    overflow: auto;
+    flex-direction: column;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+  }
+  .navigation__list._active {
+    top: 0;
+  }
+}
